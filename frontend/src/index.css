@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #0f0f12;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+  color: #e4e4e7;
+}
+
+/* FORM */
+
+.note-create-form {
+  display: flex;
+  gap: 1rem;
+  padding: 3rem 2rem 2rem;
+  justify-content: center;
+}
+
+.note-create-form input {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #27272a;
+  background: #18181b;
+  color: #e4e4e7;
+  width: 220px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.note-create-form input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+.note-create-form button {
+  padding: 0.8rem 1.4rem;
+  border-radius: 12px;
+  border: none;
+  background: #7c3aed;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.note-create-form button:hover {
+  background: #8b5cf6;
+}
+
+/* NOTES GRID */
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.8rem;
+  padding: 2rem 3rem 4rem;
+}
+
+/* NOTE CARD */
+
+.note {
+  background: #18181b;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid #27272a;
+  transition: all 0.25s ease;
+}
+
+.note:hover {
+  transform: translateY(-5px);
+  border-color: #3f3f46;
+}
+
+.note h1 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  color: #fafafa;
+}
+
+.note p {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* BUTTONS */
+
+.note button {
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.75rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: 0.2s ease;
+}
+
+.note button:first-of-type {
+  background: #3f1d1d;
+  color: #f87171;
+}
+
+.note button:first-of-type:hover {
+  background: #4c1d1d;
+}
+
+.note button:last-of-type {
+  background: #1e1b4b;
+  color: #a78bfa;
+}
+
+.note button:last-of-type:hover {
+  background: #312e81;
+}
