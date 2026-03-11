@@ -6,7 +6,7 @@ function App() {
   const [notes, setNotes] = useState([])
 
   function fetchNotes() {
-    axios.get('http://localhost:3000/api/notes')
+    axios.get('https://notes-app-1-w3he.onrender.com/api/notes')
       .then((res) => {
         setNotes(res.data.notes)
       })
@@ -21,7 +21,7 @@ function App() {
     const { title, description } = e.target.elements
     console.log(title.value, description.value);
 
-   axios.post("https://notes-app-mveh.onrender.com/api/notes", {
+   axios.post("https://notes-app-1-w3he.onrender.com/api/notes", {
   title: title.value,
   description: description.value
 })
@@ -33,7 +33,7 @@ function App() {
   }
 
   function handleDeleteNote(noteId) {
-    axios.delete("http://localhost:3000/api/notes/" + noteId)
+    axios.delete("https://notes-app-1-w3he.onrender.com/api/notes/" + noteId)
       .then(res => {
         console.log(res.data)
         fetchNotes()
@@ -48,7 +48,7 @@ function App() {
 
   if (!newTitle || !newDescription) return
 
-  axios.patch("http://localhost:3000/api/notes/" + note._id, {
+  axios.patch("https://notes-app-1-w3he.onrender.com/api/notes/" + note._id, {
     title: newTitle,
     description: newDescription
   })
