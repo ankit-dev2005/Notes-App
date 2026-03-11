@@ -21,10 +21,10 @@ function App() {
     const { title, description } = e.target.elements
     console.log(title.value, description.value);
 
-    axios.post("http://localhost:3000/api/notes", {
-      title: title.value,
-      description: description.value
-    })
+   axios.post("https://notes-app-mveh.onrender.com/api/notes", {
+  title: title.value,
+  description: description.value
+})
       .then(res => {
         console.log(res.data)
         fetchNotes()
